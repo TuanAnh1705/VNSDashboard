@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_element_process_cta_imgs",
+  "info": {
+    "displayName": "cta-img"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

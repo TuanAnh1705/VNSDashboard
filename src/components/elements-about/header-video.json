@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_about_header_videos",
+  "info": {
+    "displayName": "headerVideo"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

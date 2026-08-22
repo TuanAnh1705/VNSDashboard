@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_text_contacts",
+  "info": {
+    "displayName": "text-contact"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

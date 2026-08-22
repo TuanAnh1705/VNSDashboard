@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_info_columns",
+  "info": {
+    "displayName": "info_column",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "text"
+    },
+    "google_map_url": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_sliders",
+  "info": {
+    "displayName": "slider",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "mainDes": {
+      "type": "string"
+    },
+    "subDes": {
+      "type": "string"
+    },
+    "slides": {
+      "type": "component",
+      "component": "elements.slide-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

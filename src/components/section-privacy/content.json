@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_section_privacy_contents",
+  "info": {
+    "displayName": "content"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

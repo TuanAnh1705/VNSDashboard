@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_products_text_bottoms",
+  "info": {
+    "displayName": "textBottom"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

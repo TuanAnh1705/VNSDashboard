@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_sections_banners",
+  "info": {
+    "displayName": "banner",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "rootImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "itemImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "firstText": {
+      "type": "string"
+    },
+    "middleText": {
+      "type": "string"
+    },
+    "lastText": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

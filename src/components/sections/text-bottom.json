@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_text_bottoms",
+  "info": {
+    "displayName": "text-bottom",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

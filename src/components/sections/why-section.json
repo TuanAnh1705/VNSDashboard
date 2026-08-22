@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_sections_why_sections",
+  "info": {
+    "displayName": "why-section",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "reason": {
+      "type": "component",
+      "component": "elements.why-element",
+      "repeatable": true
+    },
+    "numberReason": {
+      "type": "component",
+      "component": "elements.number-why",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

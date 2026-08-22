@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_sections_footers",
+  "info": {
+    "displayName": "footer",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "headerLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pageLinks": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "socialLinks": {
+      "type": "component",
+      "component": "elements.linksocial",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

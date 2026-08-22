@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DefaultSEO": {
+      "type": "component",
+      "component": "section-seo.default-seo",
+      "repeatable": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections-about.banner",
+        "elements.text-header-blog"
+      ]
+    },
+    "seoSchemaJsonld": {
+      "type": "json"
+    }
+  }
+}

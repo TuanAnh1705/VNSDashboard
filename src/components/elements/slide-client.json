@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_slide_clients",
+  "info": {
+    "displayName": "slide-client",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "clientImg": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "testimonial": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

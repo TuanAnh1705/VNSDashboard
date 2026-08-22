@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "furnitures",
+  "info": {
+    "singularName": "furniture",
+    "pluralName": "furnitures",
+    "displayName": "Furniture"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DefaultSEO": {
+      "type": "component",
+      "component": "section-seo.default-seo",
+      "repeatable": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections-about.banner",
+        "elements-products.text-header",
+        "sections-products.textiles",
+        "sections-services.faq"
+      ]
+    },
+    "seoSchemaJsonld": {
+      "type": "json"
+    }
+  }
+}

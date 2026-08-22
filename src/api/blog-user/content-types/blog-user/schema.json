@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_users",
+  "info": {
+    "singularName": "blog-user",
+    "pluralName": "blog-users",
+    "displayName": "blogUser"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "blog_details": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog-detail.blog-detail",
+      "mappedBy": "authors"
+    }
+  }
+}

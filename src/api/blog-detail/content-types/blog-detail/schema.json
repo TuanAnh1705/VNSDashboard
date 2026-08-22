@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_details",
+  "info": {
+    "singularName": "blog-detail",
+    "pluralName": "blog-details",
+    "displayName": "BlogDetail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "featureImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog-user.blog-user",
+      "inversedBy": "blog_details"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog-category.blog-category",
+      "inversedBy": "blog_details"
+    },
+    "isPinned": {
+      "type": "boolean"
+    },
+    "isHidden": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 54
+    },
+    "DefaultSEO": {
+      "type": "component",
+      "component": "section-seo.default-seo",
+      "repeatable": true
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections-blog.blog-detail",
+        "sections-blog.tag-section"
+      ]
+    }
+  }
+}

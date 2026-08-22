@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_sections_services_our_processes",
+  "info": {
+    "displayName": "ourProcess"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "boat": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "process": {
+      "type": "component",
+      "component": "elements-services.process",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_section_seo_default_seos",
+  "info": {
+    "displayName": "Default-seo"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "maxLength": 70
+    },
+    "metaDescription": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "metaImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "keywords": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

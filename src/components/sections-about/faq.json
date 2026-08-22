@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_about_faqs",
+  "info": {
+    "displayName": "faq"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "faq": {
+      "type": "component",
+      "component": "elements-about.questions",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

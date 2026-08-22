@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_services_services",
+  "info": {
+    "displayName": "services"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "component": "elements-services.services",
+      "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

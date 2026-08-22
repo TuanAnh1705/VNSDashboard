@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "cast"
+  },
+  "options": {},
+  "attributes": {
+    "intro": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

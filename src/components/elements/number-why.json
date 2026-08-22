@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_number_whies",
+  "info": {
+    "displayName": "number-why",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

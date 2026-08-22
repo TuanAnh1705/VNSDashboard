@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_elements_slide_items",
+  "info": {
+    "displayName": "Slide-Item",
+    "icon": "cast"
+  },
+  "options": {},
+  "attributes": {
+    "subTitle": {
+      "type": "string"
+    },
+    "mainTitle": {
+      "type": "text"
+    },
+    "description": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

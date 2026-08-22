@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "AboutUs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DefaultSEO": {
+      "type": "component",
+      "component": "section-seo.default-seo",
+      "repeatable": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections-about.banner",
+        "sections-about.expertise",
+        "sections-about.services",
+        "sections-about.faq",
+        "sections-about.need-help"
+      ]
+    },
+    "seoSchemaJsonld": {
+      "type": "json"
+    }
+  }
+}

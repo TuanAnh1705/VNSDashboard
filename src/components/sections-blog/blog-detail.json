@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_blog_blog_details",
+  "info": {
+    "displayName": "BlogDetail"
+  },
+  "options": {},
+  "attributes": {
+    "BlogContent": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_products",
+  "info": {
+    "displayName": "product",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "productItem": {
+      "type": "component",
+      "component": "elements.product-home",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

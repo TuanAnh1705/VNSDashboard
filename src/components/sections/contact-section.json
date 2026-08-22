@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_contact_sections",
+  "info": {
+    "displayName": "ContactSection",
+    "icon": "headphone"
+  },
+  "options": {},
+  "attributes": {
+    "sub_title": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "info": {
+      "type": "component",
+      "component": "elements.info-column",
+      "repeatable": true
+    },
+    "formConfig": {
+      "type": "component",
+      "component": "elements.form-config",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

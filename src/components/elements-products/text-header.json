@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_products_text_headers",
+  "info": {
+    "displayName": "textHeader"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

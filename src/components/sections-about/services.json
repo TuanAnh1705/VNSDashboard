@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_about_services",
+  "info": {
+    "displayName": "services"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "main": {
+      "type": "component",
+      "component": "elements-about.services",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

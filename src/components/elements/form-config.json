@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_elements_form_configs",
+  "info": {
+    "displayName": "form_config",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

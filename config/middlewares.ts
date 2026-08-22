@@ -1,7 +1,21 @@
 export default [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:', 'http:', 'https://proxy-event.ckeditor.com'],
+          'img-src': ["'self'", 'data:', 'blob:'],
+          'media-src': ["'self'", 'data:', 'blob:'],
+          'script-src': ["'self'", "'unsafe-inline'", 'https://cdn.ckeditor.com'],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',

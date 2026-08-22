@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_slider_teams",
+  "info": {
+    "displayName": "slider-team",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": true
+    },
+    "slides": {
+      "type": "component",
+      "component": "elements.slide-team",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

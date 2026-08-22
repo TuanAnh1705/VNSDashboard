@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_linksocials",
+  "info": {
+    "displayName": "Linksocial",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DefaultSEO": {
+      "type": "component",
+      "component": "section-seo.default-seo",
+      "repeatable": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections-about.banner",
+        "sections-services.services",
+        "sections-services.our-process",
+        "sections-services.why-choose-us",
+        "sections-services.faq"
+      ]
+    },
+    "seoSchemaJsonld": {
+      "type": "json"
+    }
+  }
+}

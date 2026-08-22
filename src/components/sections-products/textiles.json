@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_products_textiles",
+  "info": {
+    "displayName": "Textiles"
+  },
+  "options": {},
+  "attributes": {
+    "Textiles": {
+      "type": "component",
+      "component": "elements-products.textiles",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

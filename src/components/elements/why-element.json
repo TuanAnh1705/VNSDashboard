@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_why_elements",
+  "info": {
+    "displayName": "why-element"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

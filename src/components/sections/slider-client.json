@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_slider_clients",
+  "info": {
+    "displayName": "slider-client",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "slides": {
+      "type": "component",
+      "component": "elements.slide-client",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

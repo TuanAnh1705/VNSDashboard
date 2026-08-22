@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_process_order_processes",
+  "info": {
+    "displayName": "OrderProcess"
+  },
+  "options": {},
+  "attributes": {
+    "cta": {
+      "type": "component",
+      "component": "element-process.cta-img",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "mainTitle": {
+      "type": "string"
+    },
+    "process": {
+      "type": "component",
+      "component": "element-process.process",
+      "repeatable": true
+    },
+    "ctaButton": {
+      "type": "component",
+      "component": "elements.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

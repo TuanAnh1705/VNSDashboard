@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_blog_tag_sections",
+  "info": {
+    "displayName": "TagSection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

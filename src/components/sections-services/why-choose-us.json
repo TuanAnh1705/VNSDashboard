@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_services_why_chooseuses",
+  "info": {
+    "displayName": "whyChooseUs"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "reason": {
+      "type": "component",
+      "component": "elements-services.why-choose-us",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
