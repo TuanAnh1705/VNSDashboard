@@ -40,6 +40,18 @@
     "latestButtonUrl": {
       "type": "string",
       "default": "#all-posts"
+    },
+    "postsEyebrow": {
+      "type": "string",
+      "default": "Vietnam Sourcing Insights"
+    },
+    "postsTitle": {
+      "type": "string",
+      "default": "Make Smarter Sourcing Decisions with the Right Knowledge"
+    },
+    "postsDescription": {
+      "type": "text",
+      "default": "Navigate Vietnam's dynamic trade landscape"
     }
   },
   "config": {}

@@ -318,6 +318,12 @@ export interface ElementsTextHeaderBlog extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'blogs'>;
     latestTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Our latest'>;
+    postsDescription: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<"Navigate Vietnam's dynamic trade landscape">;
+    postsEyebrow: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Vietnam Sourcing Insights'>;
+    postsTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Make Smarter Sourcing Decisions with the Right Knowledge'>;
     title: Schema.Attribute.String;
   };
 }
