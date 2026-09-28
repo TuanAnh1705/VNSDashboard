@@ -1012,6 +1012,81 @@ export interface ApiProductProduct extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiResourceCategoryResourceCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'resource_categories';
+  info: {
+    description: 'Filter tabs of the Sourcing Toolkit (Checklists, eBook, ...)';
+    displayName: 'ResourceCategory';
+    pluralName: 'resource-categories';
+    singularName: 'resource-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    documents: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::resource-document.resource-document'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::resource-category.resource-category'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiResourceDocumentResourceDocument
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'resource_documents';
+  info: {
+    description: 'Downloadable toolkit cards; the file is sent after the visitor fills the form';
+    displayName: 'ResourceDocument';
+    pluralName: 'resource-documents';
+    singularName: 'resource-document';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::resource-category.resource-category'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.Text;
+    file: Schema.Attribute.Media<'files'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::resource-document.resource-document'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Struct.SingleTypeSchema {
   collectionName: 'services';
   info: {
@@ -1044,6 +1119,47 @@ export interface ApiServiceService extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seoSchemaJsonld: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSourcingToolkitSourcingToolkit
+  extends Struct.SingleTypeSchema {
+  collectionName: 'sourcing_toolkits';
+  info: {
+    description: 'Sourcing Toolkit section on /resources (header + download dialog copy)';
+    displayName: 'SourcingToolkit';
+    pluralName: 'sourcing-toolkits';
+    singularName: 'sourcing-toolkit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    allLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'All'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'From checklists to templates, explore tools curated to help you work faster and source smarter \u2014 all free, all yours.'>;
+    dialogDescription: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Fill in your details and the document will download automatically.'>;
+    dialogTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Get Your Free Resource'>;
+    eyebrow: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Sourcing Toolkit'>;
+    image: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sourcing-toolkit.sourcing-toolkit'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Essential Tools for Efficient Sourcing'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1645,7 +1761,10 @@ declare module '@strapi/strapi' {
       'api::packaging.packaging': ApiPackagingPackaging;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::product.product': ApiProductProduct;
+      'api::resource-category.resource-category': ApiResourceCategoryResourceCategory;
+      'api::resource-document.resource-document': ApiResourceDocumentResourceDocument;
       'api::service.service': ApiServiceService;
+      'api::sourcing-toolkit.sourcing-toolkit': ApiSourcingToolkitSourcingToolkit;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'api::textile.textile': ApiTextileTextile;
       'plugin::content-releases.release': PluginContentReleasesRelease;

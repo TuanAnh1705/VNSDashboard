@@ -5,6 +5,9 @@
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string"
+    },
     "description": {
       "type": "text"
     },
@@ -17,6 +20,26 @@
         "videos",
         "audios"
       ]
+    },
+    "latestTitle": {
+      "type": "string",
+      "default": "Our latest"
+    },
+    "latestHighlight": {
+      "type": "string",
+      "default": "blogs"
+    },
+    "latestDescription": {
+      "type": "text",
+      "default": "Get fresh insights, stories, and updates from Vietnam's sourcing and trade scene."
+    },
+    "latestButtonLabel": {
+      "type": "string",
+      "default": "View all"
+    },
+    "latestButtonUrl": {
+      "type": "string",
+      "default": "#all-posts"
     }
   },
   "config": {}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resource_categories",
+  "info": {
+    "singularName": "resource-category",
+    "pluralName": "resource-categories",
+    "displayName": "ResourceCategory",
+    "description": "Filter tabs of the Sourcing Toolkit (Checklists, eBook, ...)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resource-document.resource-document",
+      "mappedBy": "category"
+    }
+  }
+}

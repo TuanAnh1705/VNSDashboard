@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resource_documents",
+  "info": {
+    "singularName": "resource-document",
+    "pluralName": "resource-documents",
+    "displayName": "ResourceDocument",
+    "description": "Downloadable toolkit cards; the file is sent after the visitor fills the form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::resource-category.resource-category",
+      "inversedBy": "documents"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
