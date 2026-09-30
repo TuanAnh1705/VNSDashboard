@@ -11,6 +11,14 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "DefaultSEO": {
+      "type": "component",
+      "component": "section-seo.default-seo",
+      "repeatable": false
+    },
+    "seoSchemaJsonld": {
+      "type": "json"
+    },
     "logo": {
       "type": "media",
       "multiple": false,
