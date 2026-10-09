@@ -25,6 +25,10 @@
     },
     "keywords": {
       "type": "text"
+    },
+    "canonicalURL": {
+      "type": "string",
+      "maxLength": 255
     }
   },
   "config": {}

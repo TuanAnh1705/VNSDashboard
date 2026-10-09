@@ -361,6 +361,10 @@ export interface SectionSeoDefaultSeo extends Struct.ComponentSchema {
     displayName: 'Default-seo';
   };
   attributes: {
+    canonicalURL: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
     keywords: Schema.Attribute.Text;
     metaDescription: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{

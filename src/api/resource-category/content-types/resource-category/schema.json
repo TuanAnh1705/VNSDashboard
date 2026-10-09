@@ -26,6 +26,11 @@
       "relation": "oneToMany",
       "target": "api::resource-document.resource-document",
       "mappedBy": "category"
+    },
+    "DefaultSEO": {
+      "type": "component",
+      "component": "section-seo.default-seo",
+      "repeatable": false
     }
   }
 }

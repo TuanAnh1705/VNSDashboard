@@ -38,6 +38,14 @@
     "order": {
       "type": "integer",
       "default": 0
+    },
+    "DefaultSEO": {
+      "type": "component",
+      "component": "section-seo.default-seo",
+      "repeatable": false
+    },
+    "seoSchemaJsonld": {
+      "type": "json"
     }
   }
 }

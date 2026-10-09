@@ -22,6 +22,9 @@
       "component": "section-seo.default-seo",
       "repeatable": false
     },
+    "seoSchemaJsonld": {
+      "type": "json"
+    },
     "blog_details": {
       "type": "relation",
       "relation": "manyToMany",

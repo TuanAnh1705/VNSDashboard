@@ -530,6 +530,7 @@ export interface ApiBlogCategoryBlogCategory
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seoSchemaJsonld: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -772,6 +773,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     cta: Schema.Attribute.Component<'elements.button', true>;
+    DefaultSEO: Schema.Attribute.Component<'section-seo.default-seo', false>;
     footer: Schema.Attribute.Component<'sections.footer', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -783,6 +785,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     logoWhite: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     navigation: Schema.Attribute.Component<'elements.link', true>;
     publishedAt: Schema.Attribute.DateTime;
+    seoSchemaJsonld: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1028,6 +1031,7 @@ export interface ApiResourceCategoryResourceCategory
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    DefaultSEO: Schema.Attribute.Component<'section-seo.default-seo', false>;
     documents: Schema.Attribute.Relation<
       'oneToMany',
       'api::resource-document.resource-document'
@@ -1070,6 +1074,7 @@ export interface ApiResourceDocumentResourceDocument
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.Date;
+    DefaultSEO: Schema.Attribute.Component<'section-seo.default-seo', false>;
     description: Schema.Attribute.Text;
     file: Schema.Attribute.Media<'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1080,6 +1085,7 @@ export interface ApiResourceDocumentResourceDocument
       Schema.Attribute.Private;
     order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
+    seoSchemaJsonld: Schema.Attribute.JSON;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
