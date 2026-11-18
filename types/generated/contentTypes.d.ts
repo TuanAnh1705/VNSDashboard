@@ -524,7 +524,7 @@ export interface ApiBagBag extends Struct.SingleTypeSchema {
       [
         'sections-about.banner',
         'elements-products.text-header',
-        'sections-products.textiles',
+        'sections-products.texteils',
         'sections-services.faq',
       ]
     >;
@@ -741,7 +741,7 @@ export interface ApiEcoFriendlyEcoFriendly extends Struct.SingleTypeSchema {
       [
         'sections-about.banner',
         'elements-products.text-header',
-        'sections-products.textiles',
+        'sections-products.texteils',
         'sections-services.faq',
       ]
     >;
@@ -778,7 +778,7 @@ export interface ApiFurnitureFurniture extends Struct.SingleTypeSchema {
       [
         'sections-about.banner',
         'elements-products.text-header',
-        'sections-products.textiles',
+        'sections-products.texteils',
         'sections-services.faq',
       ]
     >;
@@ -849,7 +849,7 @@ export interface ApiHandicraftHandicraft extends Struct.SingleTypeSchema {
       [
         'sections-about.banner',
         'elements-products.text-header',
-        'sections-products.textiles',
+        'sections-products.texteils',
         'sections-services.faq',
       ]
     >;
@@ -965,7 +965,7 @@ export interface ApiPackagingPackaging extends Struct.SingleTypeSchema {
       [
         'sections-about.banner',
         'elements-products.text-header',
-        'sections-products.textiles',
+        'sections-products.texteils',
         'sections-services.faq',
       ]
     >;
@@ -1246,12 +1246,12 @@ export interface ApiTermsAndConditionTermsAndCondition
   };
 }
 
-export interface ApiTextileTextile extends Struct.SingleTypeSchema {
+export interface ApiTexteilTexteil extends Struct.SingleTypeSchema {
   collectionName: 'textiles';
   info: {
-    displayName: 'Textile';
-    pluralName: 'textiles';
-    singularName: 'textile';
+    displayName: 'Texteils';
+    pluralName: 'texteils';
+    singularName: 'texteil';
   };
   options: {
     draftAndPublish: true;
@@ -1261,7 +1261,7 @@ export interface ApiTextileTextile extends Struct.SingleTypeSchema {
       [
         'sections-about.banner',
         'elements-products.text-header',
-        'sections-products.textiles',
+        'sections-products.texteils',
         'sections-services.faq',
       ]
     >;
@@ -1272,7 +1272,7 @@ export interface ApiTextileTextile extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::textile.textile'
+      'api::texteil.texteil'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1815,7 +1815,7 @@ declare module '@strapi/strapi' {
       'api::service.service': ApiServiceService;
       'api::sourcing-toolkit.sourcing-toolkit': ApiSourcingToolkitSourcingToolkit;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
-      'api::textile.textile': ApiTextileTextile;
+      'api::texteil.texteil': ApiTexteilTexteil;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

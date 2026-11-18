@@ -1,13 +1,13 @@
 {
   "collectionName": "components_sections_products_textiles",
   "info": {
-    "displayName": "Textiles"
+    "displayName": "Texteils"
   },
   "options": {},
   "attributes": {
-    "Textiles": {
+    "Texteils": {
       "type": "component",
-      "component": "elements-products.textiles",
+      "component": "elements-products.texteils",
       "repeatable": true
     }
   },

@@ -92,10 +92,10 @@ export interface ElementsProductsTextHeader extends Struct.ComponentSchema {
   };
 }
 
-export interface ElementsProductsTextiles extends Struct.ComponentSchema {
+export interface ElementsProductsTexteils extends Struct.ComponentSchema {
   collectionName: 'components_elements_products_textiles';
   info: {
-    displayName: 'Textiles';
+    displayName: 'Texteils';
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.button', false>;
@@ -519,13 +519,13 @@ export interface SectionsProductsTextBottom extends Struct.ComponentSchema {
   };
 }
 
-export interface SectionsProductsTextiles extends Struct.ComponentSchema {
+export interface SectionsProductsTexteils extends Struct.ComponentSchema {
   collectionName: 'components_sections_products_textiles';
   info: {
-    displayName: 'Textiles';
+    displayName: 'Texteils';
   };
   attributes: {
-    Textiles: Schema.Attribute.Component<'elements-products.textiles', true>;
+    Texteils: Schema.Attribute.Component<'elements-products.texteils', true>;
   };
 }
 
@@ -744,7 +744,7 @@ declare module '@strapi/strapi' {
       'elements-about.services': ElementsAboutServices;
       'elements-products.products': ElementsProductsProducts;
       'elements-products.text-header': ElementsProductsTextHeader;
-      'elements-products.textiles': ElementsProductsTextiles;
+      'elements-products.texteils': ElementsProductsTexteils;
       'elements-services.faq': ElementsServicesFaq;
       'elements-services.process': ElementsServicesProcess;
       'elements-services.services': ElementsServicesServices;
@@ -775,7 +775,7 @@ declare module '@strapi/strapi' {
       'sections-process.order-process': SectionsProcessOrderProcess;
       'sections-products.products': SectionsProductsProducts;
       'sections-products.text-bottom': SectionsProductsTextBottom;
-      'sections-products.textiles': SectionsProductsTextiles;
+      'sections-products.texteils': SectionsProductsTexteils;
       'sections-services.faq': SectionsServicesFaq;
       'sections-services.our-process': SectionsServicesOurProcess;
       'sections-services.services': SectionsServicesServices;

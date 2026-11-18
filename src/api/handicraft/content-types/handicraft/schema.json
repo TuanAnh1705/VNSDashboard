@@ -21,7 +21,7 @@
       "components": [
         "sections-about.banner",
         "elements-products.text-header",
-        "sections-products.textiles",
+        "sections-products.texteils",
         "sections-services.faq"
       ]
     },
