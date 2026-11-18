@@ -5,7 +5,32 @@ import {
   defaultMarkdownPreset,
   type Preset,
 } from '@_sh/strapi-plugin-ckeditor';
+import {
+  Essentials,
+  Paragraph,
+  Bold,
+  Italic,
+  Link,
+  AutoLink,
+} from 'ckeditor5';
 import { ArticleCtaPlugin } from './ckeditor/ArticleCtaPlugin';
+
+/**
+ * Small editor for one Reference line (BlogDetail › references › text): text + bold/italic + link
+ * only, e.g. "<a>Journey to 2030: Vietnam's Next Growth Cycle</a>, KPMG in Vietnam (October 2026)".
+ * The site shows it in the [n] popover and in the References list at the end of the article.
+ */
+const referenceLinePreset: Preset = {
+  name: 'referenceLine',
+  description: 'Reference line (text + link)',
+  editorConfig: {
+    licenseKey: 'GPL',
+    plugins: [Essentials, Paragraph, Bold, Italic, Link, AutoLink],
+    toolbar: ['link', 'bold', 'italic', '|', 'undo', 'redo'],
+    link: { defaultProtocol: 'https://' },
+    placeholder: "Journey to 2030: Vietnam's Next Growth Cycle, KPMG in Vietnam (October 2026)",
+  },
+};
 
 /**
  * Preset `defaultHtml` (BlogDetail › BlogContent, privacy content) plus the "CTA Box"
@@ -36,7 +61,7 @@ export default {
   register() {
     // Must run in `register` — the plugin config is locked after bootstrap.
     setPluginConfig({
-      presets: [withArticleCta(defaultHtmlPreset), defaultMarkdownPreset],
+      presets: [withArticleCta(defaultHtmlPreset), defaultMarkdownPreset, referenceLinePreset],
     });
   },
   bootstrap(_app: StrapiApp) {},

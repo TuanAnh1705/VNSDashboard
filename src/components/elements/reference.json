@@ -3,13 +3,19 @@
   "info": {
     "displayName": "Reference",
     "icon": "quote",
-    "description": "A source cited in the article as [1], [2] … (order here = number in the text)"
+    "description": "Một nguồn tham khảo — hiện trong khối \"References\" cuối bài (mặc định thu gọn, người đọc bấm để xổ ra), đánh số 01, 02 … theo thứ tự ở đây. Cách 1 (khuyên dùng): gõ cả dòng vào ô text, bôi chữ rồi bấm nút link để gắn link — ví dụ: Journey to 2030: Vietnam's Next Growth Cycle (link), KPMG in Vietnam (October 2026). Cách 2: để trống text, điền title / url / publisher / publishedDate."
   },
   "options": {},
   "attributes": {
+    "text": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "referenceLine"
+      }
+    },
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "url": {
       "type": "string"

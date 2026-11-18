@@ -249,14 +249,21 @@ export interface ElementsProductHome extends Struct.ComponentSchema {
 export interface ElementsReference extends Struct.ComponentSchema {
   collectionName: 'components_elements_references';
   info: {
-    description: 'A source cited in the article as [1], [2] \u2026 (order here = number in the text)';
+    description: 'M\u1ED9t ngu\u1ED3n tham kh\u1EA3o \u2014 hi\u1EC7n trong kh\u1ED1i "References" cu\u1ED1i b\u00E0i (m\u1EB7c \u0111\u1ECBnh thu g\u1ECDn, ng\u01B0\u1EDDi \u0111\u1ECDc b\u1EA5m \u0111\u1EC3 x\u1ED5 ra), \u0111\u00E1nh s\u1ED1 01, 02 \u2026 theo th\u1EE9 t\u1EF1 \u1EDF \u0111\u00E2y. C\u00E1ch 1 (khuy\u00EAn d\u00F9ng): g\u00F5 c\u1EA3 d\u00F2ng v\u00E0o \u00F4 text, b\u00F4i ch\u1EEF r\u1ED3i b\u1EA5m n\u00FAt link \u0111\u1EC3 g\u1EAFn link \u2014 v\u00ED d\u1EE5: Journey to 2030: Vietnam\'s Next Growth Cycle (link), KPMG in Vietnam (October 2026). C\u00E1ch 2: \u0111\u1EC3 tr\u1ED1ng text, \u0111i\u1EC1n title / url / publisher / publishedDate.';
     displayName: 'Reference';
     icon: 'quote';
   };
   attributes: {
     publishedDate: Schema.Attribute.Date;
     publisher: Schema.Attribute.String;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    text: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'referenceLine';
+        }
+      >;
+    title: Schema.Attribute.String;
     url: Schema.Attribute.String;
   };
 }
