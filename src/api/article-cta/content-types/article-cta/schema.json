@@ -5,7 +5,7 @@
     "singularName": "article-cta",
     "pluralName": "article-ctas",
     "displayName": "Article CTA Box",
-    "description": "Khung kêu gọi hành động chèn vào thân bài blog. Tạo khung ở đây, rồi trong ô BlogContent của bài bấm nút \"CTA Box\" trên thanh công cụ CKEditor để chèn vào đúng chỗ. Variant: box = khung lớn nền #f2f2eb (eyebrow + tiêu đề + mô tả + nút to); bar = thanh gọn một dòng nền #fafaf8, nút nhỏ. Một khung dùng lại được ở nhiều bài — sửa ở đây là mọi bài đang chèn nó đổi theo. Bài KHÔNG chèn khung nào sẽ tự dùng 2 khung mặc định: vns-default-bar (giữa bài) và vns-default-box (cuối bài) — đừng xoá 2 khung này."
+    "description": "Khung kêu gọi hành động chèn vào thân bài blog. Tạo khung ở đây, rồi trong ô BlogContent của bài bấm nút \"CTA Box\" (menu ⋮ cuối thanh công cụ CKEditor) để chèn vào đúng chỗ muốn — chèn bao nhiêu khung, ở đâu cũng được. Variant: box = khung lớn nền #f2f2eb (eyebrow + tiêu đề + mô tả + nút to); bar = thanh gọn một dòng nền #fafaf8, nút nhỏ (eyebrow và mô tả bị bỏ qua). Một khung dùng lại được ở nhiều bài — sửa ở đây là mọi bài đang chèn nó đổi theo; xoá khung thì chỗ chèn trên web tự biến mất."
   },
   "options": {
     "draftAndPublish": false
@@ -23,7 +23,10 @@
     },
     "variant": {
       "type": "enumeration",
-      "enum": ["box", "bar"],
+      "enum": [
+        "box",
+        "bar"
+      ],
       "default": "box",
       "required": true
     },

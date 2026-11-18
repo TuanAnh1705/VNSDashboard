@@ -17,7 +17,7 @@ import {
  *
  * Bài chỉ giữ một thẻ đánh dấu:
  *
- *     <div class="article-cta" data-cta="vns-default-box"></div>
+ *     <div class="article-cta" data-cta="get-a-quote"></div>
  *
  * còn nội dung (eyebrow, tiêu đề, mô tả, nút, link, variant box/bar) sống trong collection
  * `article-cta`. Frontend (VietNamSourcing, qua vns-core) đọc `data-cta`, gọi
