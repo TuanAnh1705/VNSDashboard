@@ -471,7 +471,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
 export interface ApiArticleCtaArticleCta extends Struct.CollectionTypeSchema {
   collectionName: 'article_ctas';
   info: {
-    description: 'Khung k\u00EAu g\u1ECDi h\u00E0nh \u0111\u1ED9ng ch\u00E8n v\u00E0o th\u00E2n b\u00E0i blog. T\u1EA1o khung \u1EDF \u0111\u00E2y, r\u1ED3i trong \u00F4 BlogContent c\u1EE7a b\u00E0i b\u1EA5m n\u00FAt "CTA Box" (menu \u22EE cu\u1ED1i thanh c\u00F4ng c\u1EE5 CKEditor) \u0111\u1EC3 ch\u00E8n v\u00E0o \u0111\u00FAng ch\u1ED7 mu\u1ED1n \u2014 ch\u00E8n bao nhi\u00EAu khung, \u1EDF \u0111\u00E2u c\u0169ng \u0111\u01B0\u1EE3c. Variant: box = khung l\u1EDBn n\u1EC1n #f2f2eb (eyebrow + ti\u00EAu \u0111\u1EC1 + m\u00F4 t\u1EA3 + n\u00FAt to); bar = thanh g\u1ECDn m\u1ED9t d\u00F2ng n\u1EC1n #fafaf8, n\u00FAt nh\u1ECF (eyebrow v\u00E0 m\u00F4 t\u1EA3 b\u1ECB b\u1ECF qua). M\u1ED9t khung d\u00F9ng l\u1EA1i \u0111\u01B0\u1EE3c \u1EDF nhi\u1EC1u b\u00E0i \u2014 s\u1EEDa \u1EDF \u0111\u00E2y l\u00E0 m\u1ECDi b\u00E0i \u0111ang ch\u00E8n n\u00F3 \u0111\u1ED5i theo; xo\u00E1 khung th\u00EC ch\u1ED7 ch\u00E8n tr\u00EAn web t\u1EF1 bi\u1EBFn m\u1EA5t.';
+    description: 'Khung k\u00EAu g\u1ECDi h\u00E0nh \u0111\u1ED9ng ch\u00E8n v\u00E0o th\u00E2n b\u00E0i blog. T\u1EA1o khung \u1EDF \u0111\u00E2y, r\u1ED3i trong \u00F4 BlogContent c\u1EE7a b\u00E0i b\u1EA5m n\u00FAt "CTA Box" (menu \u22EE cu\u1ED1i thanh c\u00F4ng c\u1EE5 CKEditor) \u0111\u1EC3 ch\u00E8n v\u00E0o \u0111\u00FAng ch\u1ED7 mu\u1ED1n \u2014 ch\u00E8n bao nhi\u00EAu khung, \u1EDF \u0111\u00E2u c\u0169ng \u0111\u01B0\u1EE3c. Variant: box = khung l\u1EDBn n\u1EC1n #f2f2eb (eyebrow + ti\u00EAu \u0111\u1EC1 + m\u00F4 t\u1EA3 + n\u00FAt to); bar = thanh g\u1ECDn m\u1ED9t d\u00F2ng n\u1EC1n #fafaf8, n\u00FAt nh\u1ECF (eyebrow v\u00E0 m\u00F4 t\u1EA3 b\u1ECB b\u1ECF qua). N\u00FAt: buttonUrl l\u00E0 link (vd /order-process) th\u00EC b\u1EA5m s\u1EBD chuy\u1EC3n trang; buttonUrl = # th\u00EC b\u1EA5m s\u1EBD M\u1EDE POPUP FORM (gi\u1ED1ng Sourcing Toolkit) \u2014 kh\u00E1ch \u0111i\u1EC1n xong, lead v\u00E0o HubSpot v\u00E0 file \u1EDF \u00F4 "file" (PDF) t\u1EF1 t\u1EA3i v\u1EC1. Ti\u00EAu \u0111\u1EC1 / m\u00F4 t\u1EA3 popup l\u1EA5y \u1EDF dialogTitle / dialogDescription. M\u1ED9t khung d\u00F9ng l\u1EA1i \u0111\u01B0\u1EE3c \u1EDF nhi\u1EC1u b\u00E0i \u2014 s\u1EEDa \u1EDF \u0111\u00E2y l\u00E0 m\u1ECDi b\u00E0i \u0111ang ch\u00E8n n\u00F3 \u0111\u1ED5i theo; xo\u00E1 khung th\u00EC ch\u1ED7 ch\u00E8n tr\u00EAn web t\u1EF1 bi\u1EBFn m\u1EA5t.';
     displayName: 'Article CTA Box';
     pluralName: 'article-ctas';
     singularName: 'article-cta';
@@ -486,7 +486,10 @@ export interface ApiArticleCtaArticleCta extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    dialogDescription: Schema.Attribute.Text;
+    dialogTitle: Schema.Attribute.String;
     eyebrow: Schema.Attribute.String;
+    file: Schema.Attribute.Media<'files'>;
     heading: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

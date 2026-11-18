@@ -5,7 +5,7 @@
     "singularName": "article-cta",
     "pluralName": "article-ctas",
     "displayName": "Article CTA Box",
-    "description": "Khung kêu gọi hành động chèn vào thân bài blog. Tạo khung ở đây, rồi trong ô BlogContent của bài bấm nút \"CTA Box\" (menu ⋮ cuối thanh công cụ CKEditor) để chèn vào đúng chỗ muốn — chèn bao nhiêu khung, ở đâu cũng được. Variant: box = khung lớn nền #f2f2eb (eyebrow + tiêu đề + mô tả + nút to); bar = thanh gọn một dòng nền #fafaf8, nút nhỏ (eyebrow và mô tả bị bỏ qua). Một khung dùng lại được ở nhiều bài — sửa ở đây là mọi bài đang chèn nó đổi theo; xoá khung thì chỗ chèn trên web tự biến mất."
+    "description": "Khung kêu gọi hành động chèn vào thân bài blog. Tạo khung ở đây, rồi trong ô BlogContent của bài bấm nút \"CTA Box\" (menu ⋮ cuối thanh công cụ CKEditor) để chèn vào đúng chỗ muốn — chèn bao nhiêu khung, ở đâu cũng được. Variant: box = khung lớn nền #f2f2eb (eyebrow + tiêu đề + mô tả + nút to); bar = thanh gọn một dòng nền #fafaf8, nút nhỏ (eyebrow và mô tả bị bỏ qua). Nút: buttonUrl là link (vd /order-process) thì bấm sẽ chuyển trang; buttonUrl = # thì bấm sẽ MỞ POPUP FORM (giống Sourcing Toolkit) — khách điền xong, lead vào HubSpot và file ở ô \"file\" (PDF) tự tải về. Tiêu đề / mô tả popup lấy ở dialogTitle / dialogDescription. Một khung dùng lại được ở nhiều bài — sửa ở đây là mọi bài đang chèn nó đổi theo; xoá khung thì chỗ chèn trên web tự biến mất."
   },
   "options": {
     "draftAndPublish": false
@@ -45,6 +45,19 @@
     },
     "buttonUrl": {
       "type": "string"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "dialogTitle": {
+      "type": "string"
+    },
+    "dialogDescription": {
+      "type": "text"
     }
   }
 }

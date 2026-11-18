@@ -36,6 +36,7 @@ export interface ArticleCta {
   heading: string;
   description: string | null;
   buttonLabel: string | null;
+  buttonUrl: string | null;
 }
 
 const MODEL = 'articleCta';
@@ -80,7 +81,7 @@ async function loadCtas(force = false): Promise<boolean> {
       const json = (await res.json()) as { data?: ArticleCta[] };
       const rows = (json.data ?? []).filter((row) => row.slug);
       const next = JSON.stringify(
-        rows.map((r) => [r.slug, r.name, r.variant, r.eyebrow, r.heading, r.description, r.buttonLabel])
+        rows.map((r) => [r.slug, r.name, r.variant, r.eyebrow, r.heading, r.description, r.buttonLabel, r.buttonUrl])
       );
       if (next === signature) return false;
       signature = next;
@@ -139,7 +140,7 @@ function renderPreview(dom: HTMLElement, slug: string) {
 
   const badge = document.createElement('div');
   badge.className = 'vns-cta__badge';
-  badge.textContent = `CTA Box · ${cta.variant === 'bar' ? 'Bar (thanh gọn)' : 'Box (khung lớn)'}`;
+  badge.textContent = `CTA Box · ${cta.variant === 'bar' ? 'Bar (thanh gọn)' : 'Box (khung lớn)'}${cta.buttonUrl?.trim() === '#' ? ' · mở form tải PDF' : ''}`;
   const heading = document.createElement('div');
   heading.className = 'vns-cta__heading';
   heading.textContent = cta.heading;
