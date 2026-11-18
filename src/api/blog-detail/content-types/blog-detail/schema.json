@@ -64,6 +64,11 @@
         "sections-blog.blog-detail",
         "sections-blog.tag-section"
       ]
+    },
+    "references": {
+      "type": "component",
+      "component": "elements.reference",
+      "repeatable": true
     }
   }
 }

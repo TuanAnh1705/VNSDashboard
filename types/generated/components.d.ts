@@ -246,6 +246,21 @@ export interface ElementsProductHome extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsReference extends Struct.ComponentSchema {
+  collectionName: 'components_elements_references';
+  info: {
+    description: 'A source cited in the article as [1], [2] \u2026 (order here = number in the text)';
+    displayName: 'Reference';
+    icon: 'quote';
+  };
+  attributes: {
+    publishedDate: Schema.Attribute.Date;
+    publisher: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsSlideClient extends Struct.ComponentSchema {
   collectionName: 'components_elements_slide_clients';
   info: {
@@ -734,6 +749,7 @@ declare module '@strapi/strapi' {
       'elements.linksocial': ElementsLinksocial;
       'elements.number-why': ElementsNumberWhy;
       'elements.product-home': ElementsProductHome;
+      'elements.reference': ElementsReference;
       'elements.slide-client': ElementsSlideClient;
       'elements.slide-item': ElementsSlideItem;
       'elements.slide-team': ElementsSlideTeam;

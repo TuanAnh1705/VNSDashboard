@@ -1,5 +1,6 @@
 import type { Core } from '@strapi/strapi';
 import seedSourcingToolkit from './bootstrap/seed-sourcing-toolkit';
+import seedArticleCtas from './bootstrap/seed-article-ctas';
 
 export default {
   /**
@@ -19,5 +20,6 @@ export default {
    */
   async bootstrap({ strapi }: { strapi: Core.Strapi }) {
     await seedSourcingToolkit(strapi);
+    await seedArticleCtas(strapi);
   },
 };

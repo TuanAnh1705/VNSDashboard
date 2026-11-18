@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_references",
+  "info": {
+    "displayName": "Reference",
+    "icon": "quote",
+    "description": "A source cited in the article as [1], [2] … (order here = number in the text)"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}
